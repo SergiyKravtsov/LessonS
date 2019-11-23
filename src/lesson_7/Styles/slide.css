@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid_body {
+  width: 1440px;
+  height: 700px;
+  border: 4px;
+  border-color: black;
+  background: cadetblue;
+}

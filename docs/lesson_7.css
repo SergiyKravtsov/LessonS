@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.grid_body {
+  width: 1440px;
+  height: 700px;
+  border: 4px;
+  border-color: black;
+  background: cadetblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 -5px;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 67px;
+  border-bottom-color: blue;
+  flex-direction: row;
+}
+
+.nav-item {
+  padding: 10px;
+  list-style-type: none;
+  margin: 0 5px;
+  font-family: helvetica;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  color: #909090;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+/*# sourceMappingURL=lesson_7.css.map*/
