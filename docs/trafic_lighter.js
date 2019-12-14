@@ -117,7 +117,7 @@ var statusB;
 
 function statusButton() {
   if (document.getElementById("startButton").textContent === "Off") {
-    document.getElementById("startButton").textContent = "Start";
+    document.getElementById("startButton").textContent = "On";
     statusB = false;
     clearColor();
   } else {
@@ -151,10 +151,6 @@ function clearColor() {
   document.getElementById("redLight").style.backgroundColor = "black";
   document.getElementById("yellowLight").style.backgroundColor = "black";
   document.getElementById("greenLight").style.backgroundColor = "black";
-}
-
-function clearButton() {
-  document.getElementById("startButton").textContent = "Start";
 }
 
 /***/ }),
