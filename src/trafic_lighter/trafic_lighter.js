@@ -1,46 +1,51 @@
 import "./trafic_lighter.css";
+const redLight = document.querySelector(".redLight");
+const yellowLight = document.querySelector(".yellowLight");
+const greenLight = document.querySelector(".greenLight");
 
-document.getElementById("redLight").onclick = iliminateRed;
-document.getElementById("yellowLight").onclick = iliminateYellow;
-document.getElementById("greenLight").onclick = iliminateGreen;
-document.getElementById("startButton").onclick = statusButton;
+const startButton = document.querySelector(".btn");
 
-let statusB;
-
-function statusButton() {
-  if (document.getElementById("startButton").textContent === "Off") {
-    document.getElementById("startButton").textContent = "On";
+const statusButton = () => {
+  if (startButton.textContent === "Off") {
+    startButton.textContent = "On";
     statusB = false;
     clearColor();
   } else {
-    document.getElementById("startButton").textContent = "Off";
+    startButton.textContent = "Off";
     statusB = true;
   }
-}
+};
 
-function iliminateRed() {
-  if (statusB === true) {
+const iliminateRed = () => {
+  if (statusB) {
     clearColor();
-    document.getElementById("redLight").style.backgroundColor = "red";
+    redLight.style.backgroundColor = "red";
   }
-}
+};
 
-function iliminateYellow() {
-  if (statusB === true) {
+const iliminateYellow = () => {
+  if (statusB) {
     clearColor();
-    document.getElementById("yellowLight").style.backgroundColor = "yellow";
+    yellowLight.style.backgroundColor = "yellow";
   }
-}
+};
 
-function iliminateGreen() {
-  if (statusB === true) {
+const iliminateGreen = () => {
+  if (statusB) {
     clearColor();
-    document.getElementById("greenLight").style.backgroundColor = "green";
+    greenLight.style.backgroundColor = "green";
   }
-}
+};
 
-function clearColor() {
-  document.getElementById("redLight").style.backgroundColor = "black";
-  document.getElementById("yellowLight").style.backgroundColor = "black";
-  document.getElementById("greenLight").style.backgroundColor = "black";
-}
+const clearColor = () => {
+  redLight.style.backgroundColor = "black";
+  yellowLight.style.backgroundColor = "black";
+  greenLight.style.backgroundColor = "black";
+};
+
+redLight.onclick = iliminateRed;
+yellowLight.onclick = iliminateYellow;
+greenLight.onclick = iliminateGreen;
+startButton.onclick = statusButton;
+
+let statusB;

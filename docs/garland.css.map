@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/garland/garland.css"],"names":[],"mappings":"AAAA,KAAK,sBAAsB,OAAO,aAAa,eAAe","file":"garland.css","sourcesContent":["body{background-color:#333}.light{display:flex;flex-wrap:wrap;flex-direction:row}\n"],"sourceRoot":""}

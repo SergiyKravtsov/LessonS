@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/trafic_lighter/trafic_lighter.css":
-/*!***********************************************!*\
-  !*** ./src/trafic_lighter/trafic_lighter.css ***!
-  \***********************************************/
+/***/ "./src/hot_wheels/hot_wheels.css":
+/*!***************************************!*\
+  !*** ./src/hot_wheels/hot_wheels.css ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -97,80 +97,44 @@
 
 /***/ }),
 
-/***/ "./src/trafic_lighter/trafic_lighter.js":
-/*!**********************************************!*\
-  !*** ./src/trafic_lighter/trafic_lighter.js ***!
-  \**********************************************/
+/***/ "./src/hot_wheels/hot_wheels.js":
+/*!**************************************!*\
+  !*** ./src/hot_wheels/hot_wheels.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _trafic_lighter_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./trafic_lighter.css */ "./src/trafic_lighter/trafic_lighter.css");
-/* harmony import */ var _trafic_lighter_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_trafic_lighter_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hot_wheels_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hot_wheels.css */ "./src/hot_wheels/hot_wheels.css");
+/* harmony import */ var _hot_wheels_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_hot_wheels_css__WEBPACK_IMPORTED_MODULE_0__);
 
-var redLight = document.querySelector(".redLight");
-var yellowLight = document.querySelector(".yellowLight");
-var greenLight = document.querySelector(".greenLight");
-var startButton = document.querySelector(".btn");
+var carElement = document.querySelector(".car");
+carElement.onclick = moveCar;
 
-var statusButton = function statusButton() {
-  if (startButton.textContent === "Off") {
-    startButton.textContent = "On";
-    statusB = false;
-    clearColor();
+function moveCar() {
+  console.log("asdasd");
+
+  if (parseInt(carElement.style.marginLeft) < 800) {
+    carElement.style.marginLeft = parseInt(carElement.style.marginLeft || "0px") + 40 + "px";
   } else {
-    startButton.textContent = "Off";
-    statusB = true;
+    carElement.style.marginLeft = "0px";
   }
-};
-
-var iliminateRed = function iliminateRed() {
-  if (statusB) {
-    clearColor();
-    redLight.style.backgroundColor = "red";
-  }
-};
-
-var iliminateYellow = function iliminateYellow() {
-  if (statusB) {
-    clearColor();
-    yellowLight.style.backgroundColor = "yellow";
-  }
-};
-
-var iliminateGreen = function iliminateGreen() {
-  if (statusB) {
-    clearColor();
-    greenLight.style.backgroundColor = "green";
-  }
-};
-
-var clearColor = function clearColor() {
-  redLight.style.backgroundColor = "black";
-  yellowLight.style.backgroundColor = "black";
-  greenLight.style.backgroundColor = "black";
-};
-
-redLight.onclick = iliminateRed;
-yellowLight.onclick = iliminateYellow;
-greenLight.onclick = iliminateGreen;
-startButton.onclick = statusButton;
-var statusB;
+}
 
 /***/ }),
 
-/***/ 5:
-/*!****************************************************!*\
-  !*** multi ./src/trafic_lighter/trafic_lighter.js ***!
-  \****************************************************/
+/***/ 6:
+/*!********************************************!*\
+  !*** multi ./src/hot_wheels/hot_wheels.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/trafic_lighter/trafic_lighter.js */"./src/trafic_lighter/trafic_lighter.js");
+module.exports = __webpack_require__(/*! ./src/hot_wheels/hot_wheels.js */"./src/hot_wheels/hot_wheels.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=trafic_lighter.js.map
+//# sourceMappingURL=hot_wheels.js.map

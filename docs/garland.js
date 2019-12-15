@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/trafic_lighter/trafic_lighter.css":
-/*!***********************************************!*\
-  !*** ./src/trafic_lighter/trafic_lighter.css ***!
-  \***********************************************/
+/***/ "./src/garland/garland.css":
+/*!*********************************!*\
+  !*** ./src/garland/garland.css ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -97,80 +97,60 @@
 
 /***/ }),
 
-/***/ "./src/trafic_lighter/trafic_lighter.js":
-/*!**********************************************!*\
-  !*** ./src/trafic_lighter/trafic_lighter.js ***!
-  \**********************************************/
+/***/ "./src/garland/garland.js":
+/*!********************************!*\
+  !*** ./src/garland/garland.js ***!
+  \********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _trafic_lighter_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./trafic_lighter.css */ "./src/trafic_lighter/trafic_lighter.css");
-/* harmony import */ var _trafic_lighter_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_trafic_lighter_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _garland_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./garland.css */ "./src/garland/garland.css");
+/* harmony import */ var _garland_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_garland_css__WEBPACK_IMPORTED_MODULE_0__);
 
-var redLight = document.querySelector(".redLight");
-var yellowLight = document.querySelector(".yellowLight");
-var greenLight = document.querySelector(".greenLight");
-var startButton = document.querySelector(".btn");
+var count = prompt("How match garlands?");
+console.log(count);
 
-var statusButton = function statusButton() {
-  if (startButton.textContent === "Off") {
-    startButton.textContent = "On";
-    statusB = false;
-    clearColor();
-  } else {
-    startButton.textContent = "Off";
-    statusB = true;
-  }
+var _loop = function _loop(i) {
+  var garlandOne = document.createElement("div");
+  garlandOne.style.width = "40px";
+  garlandOne.style.height = "40px";
+  garlandOne.style.backgroundColor = "#333";
+  garlandOne.style.borderStyle = "solid";
+  garlandOne.style.borderColor = "#d3d3d3";
+  garlandOne.style.borderWidth = "5px";
+  garlandOne.style.marginLeft = "10px";
+  garlandOne.style.marginBottom = "10px";
+  garlandOne.style.backgroundColor = "#111";
+  garlandOne.style.borderRadius = "60%"; //document.querySelector(".light").appendChild(garlandOne);
+
+  var colorRandom = function colorRandom() {
+    var hexRandom = Math.floor(Math.random() * 16777215).toString(16);
+    garlandOne.style.backgroundColor = "#" + hexRandom;
+  };
+
+  setInterval(colorRandom, 1000);
+  document.querySelector(".light").append(garlandOne);
 };
 
-var iliminateRed = function iliminateRed() {
-  if (statusB) {
-    clearColor();
-    redLight.style.backgroundColor = "red";
-  }
-};
-
-var iliminateYellow = function iliminateYellow() {
-  if (statusB) {
-    clearColor();
-    yellowLight.style.backgroundColor = "yellow";
-  }
-};
-
-var iliminateGreen = function iliminateGreen() {
-  if (statusB) {
-    clearColor();
-    greenLight.style.backgroundColor = "green";
-  }
-};
-
-var clearColor = function clearColor() {
-  redLight.style.backgroundColor = "black";
-  yellowLight.style.backgroundColor = "black";
-  greenLight.style.backgroundColor = "black";
-};
-
-redLight.onclick = iliminateRed;
-yellowLight.onclick = iliminateYellow;
-greenLight.onclick = iliminateGreen;
-startButton.onclick = statusButton;
-var statusB;
+for (var i = 0; i < count; i++) {
+  _loop(i);
+}
 
 /***/ }),
 
-/***/ 5:
-/*!****************************************************!*\
-  !*** multi ./src/trafic_lighter/trafic_lighter.js ***!
-  \****************************************************/
+/***/ 7:
+/*!**************************************!*\
+  !*** multi ./src/garland/garland.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/trafic_lighter/trafic_lighter.js */"./src/trafic_lighter/trafic_lighter.js");
+module.exports = __webpack_require__(/*! ./src/garland/garland.js */"./src/garland/garland.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=trafic_lighter.js.map
+//# sourceMappingURL=garland.js.map

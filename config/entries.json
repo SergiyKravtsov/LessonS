@@ -16,5 +16,11 @@
   ],
   "trafic_lighter": [
     "./src/trafic_lighter/trafic_lighter.js"
+  ],
+  "hot_wheels": [
+    "./src/hot_wheels/hot_wheels.js"
+  ],
+  "garland": [
+    "./src/garland/garland.js"
   ]
 }
